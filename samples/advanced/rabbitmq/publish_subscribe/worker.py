@@ -20,5 +20,4 @@ def callback(ch, method, properties, body):
 
 channel.basic_qos(prefetch_count=1)
 channel.basic_consume(callback, queue='task_queue')
-
-channel.start_consuming()
+c)
