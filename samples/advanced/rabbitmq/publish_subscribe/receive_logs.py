@@ -8,6 +8,7 @@ channel = connection.channel()
 
 channel.exchange_declare(exchange='logs', exchange_type='fanout')
 
+#当与消费者（consumer）断开连接的时候，这个队列应当被立即删除。exclusive标识符即可达到此目的。
 result = channel.queue_declare(exclusive=True)
 queue_name = result.method.queue
 
