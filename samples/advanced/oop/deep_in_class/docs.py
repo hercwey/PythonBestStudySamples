@@ -14,6 +14,27 @@ l.__class__ :
 l.__dict__ :
 -----------------------
 特殊的方法：
+__init__() : 初始化/构造器方法
+__new__() : 构造器方法, 在__init__()方法执行之前执行的, new方法可以return语句，而init方法不能有。
+__del__() : 解构器，是实例释放前提供特殊功能的方法。
+
+===========================================
+用特殊方法定制类
+类和对象类型
+
+------------------------
+简单定制
+
+------------------------
+稍复杂定制
+
+------------------------
+
+===========================================
+迭代器和生成器
+
+
+
 '''
 
 
@@ -45,3 +66,22 @@ class C(F):
 
 
 print(C.__bases__)
+
+
+class A(object):
+    def __new__(cls):
+        print"A.__new__ called"
+        return super(A, cls).__new__(cls)
+
+    def __init__(self):
+        print "A.__init__called"
+
+
+A()
+
+
+class RoundFloat(float):
+    def __new__(cls, val):
+        return super(RoundFloat, cls).__new__(cls, round(val, 2))
+
+print RoundFloat(3.1415)

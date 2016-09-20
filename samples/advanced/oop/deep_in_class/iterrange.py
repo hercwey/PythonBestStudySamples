@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+'''
+迭代器学习
+'''
+
 class MyRange(object):
     def __init__(self, n):
         self.i = 0

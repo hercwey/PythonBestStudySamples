@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+# -*-coding: utf-8-*-
+'''
+定制类：显示分数
+'''
+
 
 class Fraction(object):
     def __init__(self, number, denom=1):
