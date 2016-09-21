@@ -16,7 +16,7 @@ import time
 
 
 class myThread(threading.Thread):
-    """线程同步实例"""
+    """线程同步实例: 通过线程锁"""
     def __init__(self, threadID, name, counter):
         threading.Thread.__init__(self)
         self.threadID = threadID
