@@ -1,0 +1,10 @@
+Python syntax may seem strange at the beginning for Java developers.
+Wouldn't it be nice if we first see how Python does the common jobs that we have done using other programming languages, like Java?
+The common code fragments are call "code idioms".
+Reading the code idioms of a programming language is often helpful, and can be served as a shortcut for learning a new programming language.
+
+The intent of this post is to list some of the most commonly used Python code idioms, in the hope that it will provide useful recommendations for other programmers (especially beginners).
+Remember that in addition to the listings below, there are other frequently used Python code fragments.
+You may also want to check you the most popular 3000 python modules.
+
+*Note: The order does not reflect each code idiom's frequency.
