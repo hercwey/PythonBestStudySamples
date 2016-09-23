@@ -10,7 +10,7 @@ class Singleton(object):
     def __new__(cls, *args, **kw):
         if not hasattr(cls, '_instance'): # 判断对象是否有_instance属性
             orig = super(Singleton, cls) # 找到Singleton的父类
-            cls._instance = orig.__new__(cls, *args, **kw) #通过父类的构造器构造实例对象
+            cls._instance = orig.__new__(cls, *args, **kw) #通过父类的构造器构造实例对象，并赋值给一个类变量
         return cls._instance
 
 class MyClass(Singleton):
