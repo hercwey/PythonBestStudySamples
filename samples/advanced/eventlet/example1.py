@@ -1,5 +1,9 @@
 # -*- coding:utf-8-*-
 """
+tutorial doc:
+http://blog.csdn.net/zhaoeryi/article/details/38871737
+http://eventlet.net/doc/basic_usage.html
+
 协程介绍如下：
     协程和线程比较像，每个协程都有⾃己的私有stack和局部变量
     一个线程内可以有很多个协程
