@@ -116,7 +116,7 @@ def decorator(aClass):
         def __init__(self, age):
             self.total_display = 0
             self.wrapped = aClass(age)
-        def display(self):;
+        def display(self):
             self.total_display += 1
             print("total display", self.total_display)
             self.wrapped.display()
