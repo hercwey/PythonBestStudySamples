@@ -1,5 +1,8 @@
 # -*-coding:utf-8-*-
 # !/usr/bin/env python
+
+# tutorial : http://rabbitmq.mr-ping.com/tutorials_with_python/[6]RPC.html
+
 import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
