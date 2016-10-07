@@ -24,24 +24,35 @@
 #  close()
 ####################################################################
 """
-每小时重启一下百度云管家
+每20分钟重启一下百度云管家
 """
 import os
+import subprocess
 import time
 
 YUNGUANJIA_EXE = r'C:\Users\Administrator.HXICBAVUV7DWEV6\AppData\Roaming\Baidu\BaiduYunGuanjia\baiduyunguanjia.exe'
 
-
-def restart_program():
-    os.system('taskkill /f /im baiduyunguanjia.exe')
-    time.sleep(10)
-    os.system(YUNGUANJIA_EXE)
+# def restart_program():
+#     print "Stopping"
+#     os.system('taskkill /f /im baiduyunguanjia.exe')
+#
+#     time.sleep(5)
+#     print "Starting..."
+#     subprocess.call(YUNGUANJIA_EXE)
+#     # if os.system(YUNGUANJIA_EXE) == 0:
+#     #     print "Started"
 
 
 if __name__ == "__main__":
     while True:
-        print "Restarting..."
-        restart_program()
-        print "Restarted"
+        print "Stopping"
+        os.system('taskkill /f /im baiduyunguanjia.exe')
+
+        time.sleep(5)
+        print "Starting... %s" % time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+        # subprocess.call(YUNGUANJIA_EXE)
+        os.popen(YUNGUANJIA_EXE)  # 非阻塞模式
+        # if os.system(YUNGUANJIA_EXE) == 0:  #阻塞模式
+        #     print "Started"
         print "Yunguanjia will be restarted in a hour later"
-        time.sleep(3600)
+        time.sleep(1200)
