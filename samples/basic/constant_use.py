@@ -8,4 +8,4 @@
 from const import const
 print const.PI
 print const.AUTHOR
-const.PI = 3.14 # 常量不能修改
+const.PI = 3.14 # 抛出异常，常量不能修改
