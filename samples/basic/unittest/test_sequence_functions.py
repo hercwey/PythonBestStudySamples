@@ -26,6 +26,8 @@ class TestSequenceFunctions(unittest.TestCase):
         self.seq.sort()
         self.assertEqual(self.seq, range(10))
 
+        self.assertEqual(self.seq, range(5)) #case不能通过
+
         """should raise an exception for an immutable sequence"""
         self.assertRaises(TypeError, random.shuffle, (1, 2, 3))
 
@@ -39,6 +41,6 @@ class TestSequenceFunctions(unittest.TestCase):
         for element in random.sample(self.seq, 5):
             self.assertTrue(element in self.seq)
 
+
 if __name__ == '__main__':
     unittest.main()
-
