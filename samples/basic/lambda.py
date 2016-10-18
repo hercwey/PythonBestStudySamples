@@ -18,3 +18,10 @@ lambda表达式是⼀⾏函数。
 原型
 lambda 参数:操作(参数)
 """
+add = lambda x, y: x+y
+print(add(1,2))
+
+#列表排序
+a = [(1, 2), (4, 1), (9, 10), (13, -3)]
+a.sort(key=lambda x: x[1])
+print(a)
