@@ -12,11 +12,11 @@
 @time: 2016/10/13 17:09
 """
 
-import unittest
+import unittest_example
 from method_example import is_prime
 
 
-class PrimeTestCase(unittest.TestCase):
+class PrimeTestCase(unittest_example.TestCase):
     """Tests for `primes.py`."""
 
     def test_is_five_prime(self):
@@ -42,4 +42,4 @@ class PrimeTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest_example.main()

@@ -13,10 +13,10 @@
 """
 
 import random
-import unittest
+import unittest_example
 
 
-class TestSequenceFunctions(unittest.TestCase):
+class TestSequenceFunctions(unittest_example.TestCase):
     def setUp(self):
         self.seq = range(10)
 
@@ -43,4 +43,4 @@ class TestSequenceFunctions(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest_example.main()
