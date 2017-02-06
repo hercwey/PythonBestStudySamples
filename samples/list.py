@@ -43,6 +43,7 @@ del word[0]
 print (word)
 del word[1:3]
 print(word)
+print('中文')
 
 ''' 
 知识点:
